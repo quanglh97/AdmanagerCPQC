@@ -1196,16 +1196,21 @@ chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
         await GetTKQC(dateObj, false)
         //if (request.checkHoaDon == true && bRunHoaDon) {
         if (request.checkHoaDon == true) {
-            if(bHoaDon == true){
-                bHoaDon = false
+
+            g_lsTKQC.forEach((tkqc) => {
+                GetHoaDon(tkqc)
+            })
             
-                g_lsTKQC.forEach((tkqc) => {
-                    GetHoaDon(tkqc)
-                })
-            }
-            else{
-                bHoaDon = true
-            }
+            // if(bHoaDon == true){
+            //     bHoaDon = false
+            
+            //     g_lsTKQC.forEach((tkqc) => {
+            //         GetHoaDon(tkqc)
+            //     })
+            // }
+            // else{
+            //     bHoaDon = true
+            // }
         }
         
         if (request.checkCD == true) {
