@@ -6023,7 +6023,7 @@ function RunAuto() {
         SetPause(true)
         GetPause()
         //runHoaDon = runHoaDon + 1
-
+   
         gPause = true
         run13h = false
         openInNewTab("https://www.facebook.com/adsmanager/manage/account")
@@ -6066,7 +6066,10 @@ function RunAuto() {
                 )
             })
         }, 30000)
+  
 
+
+        
         // if (bRunHoaDon == true) {
         //     bRunHoaDon = false
         //     gPause = true
@@ -6157,7 +6160,7 @@ function RunAuto() {
         //         })
         //     }, 30000)
         // } 
-        
+
     }, 10000)
 }
 
