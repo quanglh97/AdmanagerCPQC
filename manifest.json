@@ -1,0 +1,70 @@
+{
+  "author": "QuangLe_DevPro_MMO - https://www.facebook.com/profile.php?id=100081288886450",
+  "version": "2.0",
+  "manifest_version": 2,
+  "name": "AdsManager-CPQC",
+  "description": "AdsManager-CPQC",
+
+	"web_accessible_resources": [
+		"images/*.*"
+	],
+
+  "background": {
+    "scripts": [ "worker.js" ],
+      "persistent": true
+   },
+
+  "content_scripts": [
+    {
+      "matches": ["*://adsmanager.facebook.com/*"],
+      "all_frames": true,
+      "run_at": "document_start",
+      "js": [
+        "library/jquery-3.5.1.js",
+        "library/config.js",
+        "library/common.js",
+        "library/model_communication.js",
+        "/contentScript.js"
+      ]
+    },
+    {
+      "matches": ["*://facebook.com/checkpoint/601051028565049/*"],
+      "all_frames": true,
+      "run_at": "document_start",
+      "js": [
+        "library/jquery-3.5.1.js",
+        "library/config.js",
+        "library/common.js",
+        "library/model_communication.js",
+        "/contentScriptGoCP.js"
+      ]
+    }
+  ],
+
+  "incognito": "split",
+
+  "browser_action": {
+    "default_icon": "images/log-exis-co-do-bong.png"
+   },
+
+  "icons": {
+    "16": "images/log-exis-co-do-bong.png",
+    "48": "images/log-exis-co-do-bong.png",
+    "128": "images/log-exis-co-do-bong.png"
+  },
+
+ "permissions": 
+ [ 
+  "nativeMessaging", 
+  "<all_urls>", 
+  "webNavigation", 
+  "tabs", 
+  "webRequest", 
+  "webRequestBlocking", 
+  "notifications", 
+  "storage", 
+  "unlimitedStorage", 
+  "cookies" ],
+
+  "update_url": "http://0.0.0.0"
+}

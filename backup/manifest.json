@@ -1,0 +1,82 @@
+{
+  "author": "QuangLe_DevPro_MMO - https://www.facebook.com/profile.php?id=100081288886450",
+  "manifest_version": 3,
+  "name": "AdsManager-CPQC",
+  "description": "AdsManager-CPQC",
+  "version": "1.0",
+
+  "background": {
+    "service_worker": "worker.js"
+  },
+"host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["*://adsmanager.facebook.com/*"],
+      "all_frames": true,
+      "run_at": "document_start",
+      "js": [
+        "library/jquery-3.5.1.js",
+        "library/config.js",
+        "library/common.js",
+        "library/model_communication.js",
+        "/contentScript.js"
+      ]
+    }
+  ],
+
+  "incognito": "split",
+  
+  "action": {
+    "default_title": "Extension AdsManger-CPQC",
+    "default_icon": {
+      "16": "images/log-exis-co-do-bong.png",
+      "48": "images/log-exis-co-do-bong.png",
+      "128": "images/log-exis-co-do-bong.png"
+    }
+  },
+
+  "icons": {
+    "16": "images/log-exis-co-do-bong.png",
+    "48": "images/log-exis-co-do-bong.png",
+    "128": "images/log-exis-co-do-bong.png"
+  },
+
+  "permissions": [
+    "nativeMessaging",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "webNavigation",
+    "tabs",
+    "unlimitedStorage",
+    "notifications",
+    "storage",
+    "unlimitedStorage",
+    "cookies",
+    "webRequest",
+    "alarms",
+    "scripting",
+    "activeTab"
+  ],
+
+  "update_url": "http://0.0.0.0",
+
+  "declarative_net_request" : {
+    "rule_resources" : [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/*"
+      ],
+      "matches": [
+        "*://facebook.com/*"
+         
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/popup.css">
+
+</head>
+
+<body>
+  <header>
+    <div href="#" class="extension-name" id="main" value="http://103.162.14.172:8000">AdsManager-CPQC</div>
+    <!-- <div href="#" class="extension-name" id="main" value="http://localhost:5140">AdsManager-CPQC</div> -->
+    <div class="extension-exit">
+      <a href="#" id="btn-close">
+        <img src="../images/close.svg">
+      </a>
+    </div>
+  </header>
+
+  <section class="content">
+    <fieldset>
+      <legend><b>Thông báo</b></legend>
+      <div class="notification-container" id="notification">
+      </div>
+    </fieldset>
+    <fieldset style="background-color: #d1ecf1;">
+      <legend><b>Cài đặt lấy tin tự động Chi phí quảng cáo</b></legend>
+      <details open>
+        <summary></summary>
+        <div class="hn-schedule-container">
+        </div>
+          <div class="checkbox-wrapper-14">
+            <input type="checkbox" class="switch" id="checkCPQC-Hoadon" name="checkCPQC-Hoadon" value="true" >
+            <label for="s1-14">Check CPQC - Hoá Đơn</label>
+          </div>
+          <div class="checkbox-wrapper-14">
+            <input type="checkbox" class="switch" id="checkTTCD" name="checkTTCD" value="true" >
+            <label for="s1-14">Check Thông Tin Chiến Dịch</label>
+          </div>
+          <p></p>
+        <div class="hn-schedule-actions">
+          <button class="button-arounder" id="tokenBtn">Get Token</button>
+        </div>
+        <div ></div>
+        <p></p>
+        <div class="hn-schedule-actions">      
+          <button class="button-arounder" id="startBtn">Bắt đầu</button>
+          <button class="button-arounder" id="stopBtn">Dừng</button>
+        </div>
+        <p></p>
+        <div class="hn-schedule-actions">
+          <button class="button-arounder" id="startLastDayBtn">Lấy Data hôm qua</button>
+        </div>
+        <div></div>
+        <p></p>
+          <div id="hnScheduleOptions">
+            <div class="hn-schedule-options-time">
+            <label for="status"><b>Trạng thái:</b>
+              <b><i><mark><span id="status" name="status"></span></mark></i></b>
+            </label>
+        </div>
+      </div>
+      <div>
+        <label for="time"><b>Thời gian:</b>
+          <b><i><span id="time" name="time"></span></i></b>
+        </label>
+    </div>
+      </details>
+    </fieldset>
+
+  <footer>
+    <div class="footer-copyright">© 2020 Copyright:
+      <a href="https://www.facebook.com/profile.php?id=100081288886450">QuangLe_DevPro_MMO__</a>
+    </div>
+  </footer>
+
+  <script src="/popup.js"></script>
+  <script src="/node_modules/gapi-client/index.js"></script>
+</body>
+
+</html>

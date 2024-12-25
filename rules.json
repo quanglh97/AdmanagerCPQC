@@ -1,0 +1,15 @@
+[
+  {
+    "id": 10,
+    "priority": 10,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "origin", "operation": "set", "value": "https://business.facebook.com" },
+        { "header": "referer", "operation": "set", "value": "https://business.facebook.com" }
+       
+      ]
+    },
+    "condition": { "urlFilter": "https://business.facebook.com/*" , "resourceTypes": ["main_frame", "xmlhttprequest", "object", "other"]}
+  }
+]
